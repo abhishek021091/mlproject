@@ -1,11 +1,11 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import numpy as np
 import pandas as pd
 
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import PredictPipeline,CustomData
 
-application = Flask(__name__)
+application = Flask(__name__, static_folder='static', template_folder='templates')
 
 app=application
 
