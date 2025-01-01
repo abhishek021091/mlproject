@@ -33,7 +33,7 @@ def predict_datapoint():
 
         predict_pipeline=PredictPipeline()
 
-        result = predict_pipeline.predict(pred_df)
+        result = np.round(predict_pipeline.predict(pred_df),0)
         
         if result[0] < 100 and result[0] >= 0:
             pass
